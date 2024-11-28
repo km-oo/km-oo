@@ -3,7 +3,7 @@ name: Generate snake animation
 on:
   # run automatically every 24 hours
   schedule:
-    - cron: "0 4 * * *" 
+    - cron: "0 20 * * *" 
   
   # allows to manually run the job at any time
   workflow_dispatch:
@@ -29,7 +29,7 @@ jobs:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/github-contribution-grid-snake.svg?hide_stack=true&speed=auto&color_dots=#EBEDF0,#9BE9A8,#40C463,#30A14E,#216E39
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&hide_stack=true&speed=auto&color_dots=#EBEDF0,#9BE9A8,#40C463,#30A14E,#216E39
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&hide_stack=true&speed=auto&color_dots=#171A1E,#153626,#0F522E,#2C7B3D,#339357
           
           
       # push the content of <build_dir> to a branch
